@@ -8,10 +8,11 @@ import { createInstance } from 'i18next';
 import i18nServer from './modules/i18n.server';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import * as i18n from './config/i18n';
+export { handleRequest as default } from '@netlify/remix-adapter';
 
 const ABORT_DELAY = 5_000;
 
-export default function handleRequest(
+export function handleRequestI18n(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
