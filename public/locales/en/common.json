@@ -1,0 +1,83 @@
+{
+  "greeting-home": "¿Qué quieres hacer?",
+  "greeting-passanger": "Buscar viaje",
+  "greeting-driver": "Publicar viaje",
+  "menu": [
+    {
+      "name": "Pasajeros",
+      "path": "/pasajeros"
+    },
+    {
+      "name": "Conductores",
+      "path": "/conductores"
+    }
+  ],
+
+  "sectionInformation": {
+    "joinMembers": "Join 2,000 members today",
+    "saveOnTravelCosts": "💸 Save on travel costs",
+    "trustedCommunity": "🤝 Trusted community",
+    "userFriendlyExperience": "✨ Easy to use",
+    "pSaveOnTravelCosts": "You will share the expenses of the trip with other passengers, which will allow you to significantly reduce your transportation costs.",
+    "pTrustedCommunity": "Join a trusted community of travelers where you can make connections and share safe and enjoyable experiences.",
+    "pUserFriendlyExperience": "Our platform gives you a seamless travel experience, from trip planning to coordination with passengers, guaranteeing a comfortable and hassle-free journey.",
+    "buttonRegister": "Register"
+  },
+  "howItWork": {
+    "how": "How Miti-Miti works",
+    "travelSearch": "Search for available trips based on your origin and destination.",
+    "travelBooking": "Book a ride with a driver heading in the same direction.",
+    "driversShare": "Driving? Share your own trip to offer available seats to others."
+  },
+  "passenger-post": {
+    "title": "Pasajeros esta semana...",
+    "buttonSeat": "Ofrece asciento",
+    "buttonMessage": "Enviar un mensaje"
+  },
+  "driverPost": {
+    "secondStep": {
+      "titleModal": "Completar tu viaje",
+      "labelTime": "Hora de salida",
+      "labelMoney": "Precio por cupo",
+      "placeHolderTimeInput": "10:00 AM",
+      "placeHolderMoneyInput": "$20.000",
+      "publishTripButton": "Publicar viaje"
+    }
+  },
+  "auth": {
+    "title": "Unete a nuestra comunidad hoy",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "name": "Nombre",
+    "namePlaceholder": "Ingresa tu nombre aqui",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña aqui",
+    "confirm": "Confirmar",
+    "numberPhone": "Número de teléfono móvil",
+    "haveyouaccount": "Ya tienes una cuenta",
+    "newUser": "Nuevo usuario",
+    "google": "Continua con Google",
+    "facebook": "Continua con Facebook",
+    "forgotPassword": "Olvidé mi contraseña",
+    "registerButton": "Regístrate aqui"
+  },
+  "otpForm": {
+    "title": "OTP Verification",
+    "subtitle": "Hemos enviado un código de verificación a su número de móvil.",
+    "noRecivedCode": "No recibíste el código OTP",
+    "submit": "Enviar",
+    "resend": "Reenviar código"
+  },
+  "footer": {
+    "title": "Vamos Miti Miti",
+    "about": "Acerca de nosotros",
+    "contact": "Contactanos",
+    "home": "Inicio",
+    "terms": "Terminos",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "copy": "Miti Miti. Todos los derechos reservados."
+  }
+}

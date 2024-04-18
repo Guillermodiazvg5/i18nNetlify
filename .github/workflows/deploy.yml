@@ -1,0 +1,150 @@
+name: Deploy
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - main
+      - qa
+    types:
+      - closed
+
+jobs:
+  build:
+    name: 🐳 Build
+    if: ${{ (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa')}}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.10.0
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: ⚙️ Build
+        run: npm run build
+
+  deploy-qa:
+    name: 🚀 Deploy QA
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    if: ${{ (github.ref == 'refs/heads/qa') }}
+
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.10.0
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: 🚚 Build
+        run: npm run build
+
+      - name: 🚚 install netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Start deployment
+        uses: bobheadxi/deployments@v1
+        id: deployment
+        with:
+          env: production
+          step: start
+
+      - name: 🚀 Deploy QA
+        if: ${{ github.ref == 'refs/heads/qa' }}
+        uses: South-Paw/action-netlify-cli@v2
+        id: netlify
+        with:
+          args: deploy --json --prod --dir './public' --message 'production QA [${{ github.sha }}]'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SIDE_ID_QA }}
+
+      - name: Finish deployment
+        uses: bobheadxi/deployments@v1
+        if: always()
+        with:
+          env: ${{ steps.deployment.outputs.env }}
+          step: finish
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: ${{ fromJson(steps.netlify.outputs.NETLIFY_OUTPUT).url }}
+
+  deploy-prod:
+    name: 🚀 Deploy Prod
+    runs-on: ubuntu-latest
+    needs: [build]
+
+    if: ${{ (github.ref == 'refs/heads/main') }}
+
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.10.0
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: 🚚 Build
+        run: npm run build
+
+      - name: 🚚 install netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Start deployment
+        uses: bobheadxi/deployments@v1
+        id: deployment
+        with:
+          env: production
+          step: start
+
+      - name: 🚀 Deploy Production
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: South-Paw/action-netlify-cli@v2
+        id: netlify
+        with:
+          args: deploy --json --prod --dir './public' --message 'production [${{ github.sha }}]'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SIDE_ID_PROD }}
+
+      - name: Finish deployment
+        uses: bobheadxi/deployments@v1
+        if: always()
+        with:
+          env: ${{ steps.deployment.outputs.env }}
+          step: finish
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: ${{ fromJson(steps.netlify.outputs.NETLIFY_OUTPUT).url }}

@@ -1,0 +1,15 @@
+node_modules
+
+/.cache
+/build
+/public/build
+.env
+.envrc
+
+# Local Netlify folder
+.netlify
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+build-storybook.log

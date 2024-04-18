@@ -1,0 +1,40 @@
+name: Chromatic
+
+on:
+  pull_request:
+    branches:
+      - main
+      - qa
+
+jobs:
+  lint:
+    name: Test UI
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.10.0
+          cache: 'npm'
+
+      - name: 🫴 Clear cache
+        run: npm cache clean --force
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useRollingCache: true
+          useLockFile: false
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

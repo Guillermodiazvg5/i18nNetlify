@@ -1,0 +1,243 @@
+{
+  "greeting-home": "¿Qué quieres hacer?",
+  "greeting-passanger": "Buscar viaje",
+  "greeting-driver": "Publicar viaje",
+  "components": {
+    "inputDatePicker": {
+      "placeHolderButton": "Selecciona la fecha"
+    },
+    "inputSelect": {
+      "placeHolderSelect": "Cupos"
+    }
+  },
+  "menu": [
+    {
+      "name": "Pasajeros",
+      "path": "/pasajeros"
+    },
+    {
+      "name": "Conductores",
+      "path": "/conductores"
+    }
+  ],
+  "home": {
+    "searchBar": {
+      "labelCityFrom": "Origen",
+      "labelCityTo": "Destino",
+      "labelDatePicker": "Fecha",
+      "labelSelectSeats": "Número de cupos",
+      "inputPlaceHolder": "Ejemplo Medellín",
+      "dialogPlaceHolderFrom": "Desde",
+      "dialogPlaceHolderTo": "Hasta",
+      "btnTextSearchTrip": "Publicar Viaje",
+      "emptyState": "No hay resultados para tu búsqueda",
+      "dialogHeaderResults": "Resultados",
+      "importantCities": "Ciudades mas buscadas",
+      "importantCitiesArray": ["Bogotá", "Medellín", "Cali", "Manizales"],
+      "selectOptions": [
+        { "label": "1 Cupo", "value": "1" },
+        { "label": "2 Cupos", "value": "2" },
+        { "label": "3 Cupos", "value": "3" },
+        { "label": "4 Cupos", "value": "4" }
+      ]
+    }
+  },
+  "sectionInformation": {
+    "joinMembers": "Únete a 2,000 miembros hoy",
+    "saveOnTravelCosts": "💸 Ahorra en costos de viaje",
+    "trustedCommunity": "🤝 Comunidad de confianza",
+    "userFriendlyExperience": "✨ Fácil de usar",
+    "pSaveOnTravelCosts": "Compartirás los gastos del viaje con otros pasajeros, lo que te permitirá reducir significativamente tus costos de transporte.",
+    "pTrustedCommunity": "Únete a una comunidad confiable de viajeros donde podrás establecer conexiones y compartir experiencias seguras y agradables.",
+    "pUserFriendlyExperience": "Nuestra plataforma te brinda una experiencia de viaje fluida, desde la planificación del viaje hasta la coordinación con los pasajeros, garantizando un trayecto cómodo y sin complicaciones.",
+    "buttonRegister": "Registrate"
+  },
+  "howItWork": {
+    "how": "Cómo funciona Miti-Miti",
+    "travelSearch": "Busqueda de viajes disponibles basados en tu origen y destino.",
+    "travelBooking": "Reserva un viaje con un conductor que se dirige a la misma direción.",
+    "driversShare": "¿Conduciendo? Comparte tu propio viaje para ofrecer asientos disponibles a otros."
+  },
+  "passenger-post": {
+    "title": "Pasajeros esta semana...",
+    "buttonSeat": "Ofrece asciento",
+    "buttonMessage": "Enviar un mensaje"
+  },
+  "driverPost": {
+    "secondStep": {
+      "titleModal": "Completar tu viaje",
+      "labelTime": "Hora de salida",
+      "labelMoney": "Precio por cupo",
+      "placeHolderTimeInput": "10:00 AM",
+      "placeHolderMoneyInput": "$20.000",
+      "publishTripButton": "Publicar viaje",
+      "commissionDisclaimer": "El precio que ingreses aquí se incrementará en un 15% (comisión) asumido por el pasajero."
+    }
+  },
+  "sectionSignUpForm": {
+    "joinMembers": "Unete a nuestra comunidad hoy",
+    "labelName": "NOMBRE",
+    "placeholderName": "ingresa tu nombre aquí",
+    "labelNumberMobile": "NUMERO DE TELEFONO MÓVIL",
+    "placeholderNumberMobile": "ingresa tu numero de telefono movil aquí",
+    "labelEmail": "CORREO ELECTRONICO",
+    "placeholderEmail": "ingresa tu correo electronico aquí",
+    "labelPassword": "CONTRASEÑA",
+    "placeholderPassword": "ingresa tu contraseña aquí",
+    "labelConfrimPassword": "CONFIRMAR CONTRASEÑA",
+    "placeholderConfirmPassword": "Confirmar tu contraseña aquí",
+    "registerButton": "Registrate",
+    "continueGoogleButton": "continuar con Google",
+    "continueFacebookButton": "continuar con Facebook",
+    "paragraphCount": "¿Ya tiene una cuenta?",
+    "linkLogin": "Iniciar sesión"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "name": "Nombre",
+    "namePlaceholder": "Ingresa tu nombre aqui",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Ingresa tu contraseña aqui",
+    "confirm": "Confirmar",
+    "numberPhone": "Número de teléfono móvil",
+    "haveyouaccount": "Ya tienes una cuenta",
+    "newUser": "Nuevo usuario",
+    "google": "Continua con Google",
+    "facebook": "Continua con Facebook",
+    "forgotPassword": "Olvidé mi contraseña",
+    "registerButton": "Regístrate aqui",
+    "registerStep": "Registro",
+    "phone": "Número de teléfono",
+    "verification": "Verificación",
+    "registerWith": "Registrate con"
+  },
+  "SubscriptionForm": {
+    "labelToDate": "Registrate para recibir actualizaciones",
+    "placeholderToDate": "Tu correo electronico",
+    "subscribeButton": "Subscribete"
+  },
+  "otpForm": {
+    "title": "OTP Verification",
+    "titleValidation": "¿Cuál es tu número de celular?",
+    "subtitle": "Hemos enviado un código de verificación a su número de móvil.",
+    "noRecivedCode": "No recibíste el código OTP",
+    "submit": "Verificar",
+    "resend": "Reenviar código",
+    "register": "Registrarme",
+    "validar": "Validar celular",
+    "loading": "Cargando...",
+    "phone": "Número de teléfono",
+    "verification": "Verificación",
+    "back": "Volver",
+    "subtitleValidation": "Vamos a enviar un código de verificación a su número de móvil.",
+    "errorValidOtp": "Error al validar el codigo",
+    "inputPhonePlaceholder": "Escribe tu número de celular (3xx xxx xxxx)"
+  },
+  "forgotPassword": {
+    "title": "Olvidaste tu contraseña",
+    "email": "Correo electrónico",
+    "placeholderEmail": "Ingresa tu correo electrónico",
+    "noRecivedCode": "No recibiste el correo electrónico",
+    "sendCode": "Enviarme un código",
+    "resend": "Reenviar"
+  },
+  "resetPassword": {
+    "title": "Contraseña enviada",
+    "subtitle": "Se ha enviado un código de verificación a tu dirección de correo electrónico.",
+    "placeholderEmail": "Ingresa el codigo de verificación aquí",
+    "noRecivedCode": "No recibiste el correo",
+    "login": "Iniciar sesión",
+    "resend": "Reenviar"
+  },
+  "footer": {
+    "title": "Vamos Miti Miti",
+    "about": "Acerca de nosotros",
+    "contact": "Contactanos",
+    "home": "Inicio",
+    "terms": "Terminos",
+    "privacy": "Privacidad",
+    "cookies": "Cookies",
+    "copy": "Miti Miti. Todos los derechos reservados."
+  },
+  "ProfileContainer": {
+    "aboutUser": "Acerca de Cristina",
+    "userName": "Cristina",
+    "Rating": "4.9",
+    "userInformation": "Ella - 36 años",
+    "carModel": "BMW 3 Series / Blanco",
+    "descriptionUser": "Hola soy de la ciudad de México, me encanta viajar y conocer gente de todo el mundo. Me apasiona viajar , la tecnologia , cocinar y la  música."
+  },
+  "modalCompleteProfile": {
+    "titleModal": "Completar tu perfil",
+    "paragraphModal": "Necesitamos más detalles sobre tí y tu carro. Completar tu , perfil ayudará a aumentar tus posiblidades de conseguir pasajeros.",
+    "buttonComplete": "Completar ahora "
+  },
+  "modalSearch": {
+    "titleModal": "Publicar tu busqueda",
+    "paragraphModal": "Necesitamos más detalles sobre tí y tu carro. Completar tu , perfil ayudará a aumentar tus posiblidades de conseguir pasajeros.",
+    "buttonPost": "Publicar ahora ",
+    "buttonNot": "No, gracias  "
+  },
+  "inputSelect": {
+    "placeHolderSelect": "Cupos"
+  },
+  "sectionCompleteProfile": {
+    "titleSection": "Completar mi perfil",
+    "linkUploadPhoto": " Subir tu foto de perfil aqui",
+    "inputUserLabelName": "NOMBRE",
+    "inputUserplaceholderName": "Ingresa tu nombre",
+    "inputTypeText": "text",
+    "inputUserLabelDate": "FECHA DE NACIMIENTO",
+    "inputTypeDate": "date",
+    "textareaUserLabelDescription": "DESCRIPCION",
+    "textareaUserplaceholderDescription": "Cuentanos sobre tí",
+    "inputTypeTextArea": "date",
+    "aboutVehicle": "Sobre tu vehiculo",
+    "inputVehicleLabelModel": "MODELO DEL AUTO",
+    "inputVehiclePlaceholderModel": "Seleciona aqui",
+    "inputVehicleLabelColor": "COLOR",
+    "inputVehiclePlaceholderColor": "Seleciona aqui",
+    "inputVehicleLabelPlaque": "PLACA DEL VEHICULO",
+    "inputVehiclePlaceholderPlaque": "Ingresa aqui",
+    "inputCheckbox": "Soy pasajero. No ofrezco viajes.",
+    "buttonSave": "Guardar cambios "
+  },
+  "BookingDriver": {
+    "titleSection": "Solicitud enviada",
+    "paragrapSection": "Te notificaremos una vez que Cristina responda.",
+    "titelTextCard": "Viernes, 29 marzo",
+    "driverName": "Cristina",
+    "userRating": "4.9",
+    "buttonSendMessage": "Envia un mensaje",
+    "buttonCancelRequest": "Cancela mi solicitud",
+    "finishLocation": "Manizales",
+    "hourFinish": "16:30",
+    "numberpassengers": "3 personas",
+    "hourStart": "6:00",
+    "startLocation": "Medellin",
+    "pricePerSeat": "  $50.000 POR PERSONA",
+    "paragrapInformative": "Su reserva no será confirmada hasta que el conductor apruebe su solicitud."
+  },
+  "BookingPassenger": {
+    "titleSection": "Oferta enviada",
+    "paragrapSection": "Te notificaremos una vez que Noah responda.",
+    "titelTextCard": "Viernes, 29 marzo",
+    "passangerName": "Noah",
+    "userRating": "*NUEVO*",
+    "buttonSendMessage": "Envia un mensaje",
+    "buttonCancelOffer": " Cancela oferta",
+    "finishLocation": "Manizales",
+    "numberpassengers":"1 persona",
+    "startLocation":"Medellin",
+    "paragrapInformative":"Su reserva no será confirmada hasta que el conductor apruebe su solicitud."
+},
+"experience":{
+  "howItwas": "¿Cómo fue tu experiencia de Miti miti con Noah?",
+  "date": "1:08 PM, hace 2 días",
+  "buttonIgnore": "ignorar",
+  "buttonComment": "Dejar un comentario"
+}
+}

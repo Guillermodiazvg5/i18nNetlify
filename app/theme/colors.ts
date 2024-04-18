@@ -1,0 +1,67 @@
+export const COLORS_THEME = {
+  white: '#ffffff',
+  black: '#000000',
+  blackOpacity: {
+    400: 'rgba(0, 0, 0, 0.2)',
+    600: 'rgba(0, 0, 0, 0.4)',
+  },
+  red: {
+    100: '#fee2e2',
+    200: '#fecaca',
+    300: '#fca5a5',
+    400: '#f87171',
+    500: '#ef4444', // Base color
+    600: '#dc2626',
+    700: '#b91c1c',
+    800: '#991b1b',
+    900: '#7f1d1d',
+  },
+  pink: {
+    100: '#ffd2c8',
+    200: '#ffd2c8',
+    300: '#ffd2c8', // Base color
+    400: '#fd856c',
+    500: '#f55e3e',
+    600: '#f55e3e',
+    700: '#f55e3e',
+    800: '#FA4C6A',
+    900: '#FA4C6A',
+    1000: '#fff1f2',
+  },
+  orange: '#ff7849',
+  green: '#13ce66',
+  yellow: '#ffc82c',
+  'gray-dark': '#1fb6ff',
+  gray: {
+    10: '#FAFAFA',
+    50: '#F1F5F9',
+    100: '#EBEBEB',
+    200: '#C9C9C9',
+    300: '#C9C9C9',
+    400: '#A4ADAD',
+    500: '#848B8B',
+    600: '#7C7C7C',
+    700: '#858585',
+    750: '#5D5D5D',
+    800: '#414141',
+    900: '#282828', // Base color
+  },
+  'gray-light': '#f4f5f7',
+  blue: {
+    50: '#ffffff',
+    75: '#F3F2FF',
+    100: '#ced5ff',
+    200: '#a6b0ff',
+    300: '#747dff',
+    400: '#0d03fe',
+    500: '#0d03fe',
+    600: '#0d03fe',
+    700: '#0d03fe',
+    800: '#0B04B0',
+    900: '#372FFF', // Base color
+    1000: '#261FFF',
+  },
+  purple: {
+    900: '#372FFF',
+  },
+};

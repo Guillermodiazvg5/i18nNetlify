@@ -1,0 +1,37 @@
+name: Testing
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - main
+      - qa
+
+jobs:
+  lint:
+    name: 🧪 Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useRollingCache: true
+          useLockFile: false
+      - run: npm install
+
+      - name: install rollup
+        run: npm i @rollup/rollup-linux-x64-gnu
+
+      - name: 🧪 Run test
+        run: npm run test
